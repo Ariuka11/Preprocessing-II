@@ -1,16 +1,50 @@
 .home {
 
+  .top-section{
+    border-bottom: 2px dashed @navigation-border;
+    h1{
+      margin-top:2%;
+      margin-bottom: 2%;
+      @media @mobile{
+        text-align: center;
+        padding: 2%;
+      }
+    }
+  .bus{
+      margin-top:2%;
+      padding-top: 1%;
+      @media @mobile{
+        padding: 2%;
+      }
+    }
+    p{
+      @media @mobile{
+        text-align: center;
+        padding: 2%;
+      }
+    }
+  
+  }
   .content-section {
     margin: 30px 0;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
+    .custom-layout();
+    @media @mobile{
+      display: flex;
+      .custom-layout();
+      flex-direction: column;
+    }
+    
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile{
+        width: 100%;
+        padding: 2%;
+        text-align: center;
+      }
     }
 
     .img-content {
@@ -20,12 +54,22 @@
       img {
         border-radius: 10px;
       }
+      @media @mobile{
+        width: 100%;
+        padding: 2%;
+        
+      }
     }
   }
 
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    @media @mobile{
+      display: flex;
+      .custom-layout();
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -35,13 +79,31 @@
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+      @media @mobile{
+        width: 100%;
+        padding: 2%;
+      }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    @media @mobile{
+      width: 100%;
+      padding: 2%;
+    }
 
+    h2{
+      @media @mobile{
+        text-align: center;
+      }
+    }
+    p{
+      @media @mobile{
+        text-align: center;
+      }
+    }
     img {
       border-radius: 10px;
     }
@@ -51,11 +113,32 @@
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
     display: flex;
-    justify-content: space-between;
+    .custom-layout();
+    width: 100%;
+    @media @mobile{
+      display: flex;
+      .custom-layout(center, center);
+      flex-direction: column;
+      width: 100%;
+    }
 
     .destination {
-      width: 30%;
+      width: 33%;
       margin-bottom: 30px;
+      @media @mobile{
+        width: 100%;
+        padding: 2%;
+        text-align: center;
+      }
+      
     }
   }
 }// home
+
+// button
+.btn{
+  .custom-btn( 190px, brown, white);
+  @media @mobile{
+    .custom-btn(100%, brown, white)
+  }
+}

@@ -1,21 +1,72 @@
 // Navigation Styles here
 header {
-    display: flex;
-   
+    display: block;
+    border-bottom: 2px dashed @navigation-border;
+    width:100%;
+    padding-bottom: 2%;
     
-    justify-content: space-between;
-    align-content: center;
-    border: 2px solid black;
+
+    @media @mobile{
+        border: none;
+    }
+    
+   
     nav{
         display: flex;
-        justify-content: space-around;
-        width: 90%;
-        align-items: center;
-        font-size: 2rem;
-        text-decoration: none;
+        .custom-layout(space-around, center);
+        width: 100%;
+        
+        overflow: hidden;
+        
+        ul{
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+            font-size: 2.5rem;
+            @media @mobile {
+                display:flex;
+                flex-direction: column;
+                width:100%;
+                .custom-layout(center, center);
+            } 
+            li{
+                @media @mobile{
+                border-top: 1px solid black;
+                border-bottom: 1px solid black;
+                width: 90%;
+                display:flex;
+                .custom-layout(center, center);
+                }
+            }  
+        }
+                      
+        a{
+            text-decoration:none;
+            color:black;
+            &:hover{
+                color:violet;
+            }
+        }
+            
+        span{
+            width: 10%;
+            display: flex;
+            .custom-layout(space-between ,center);
+            font-size: 4.5rem;
+            @media @mobile {
+                display:flex;
+                flex-direction: column;
+                width:50%;
+                .custom-layout(center, space-between);
+                font-size: 2.5rem;
+            }
+        }
+        
+        
+                            
     }
-    .logo{
-        width: 15%;
-        height: 15%;
-    }
-    }
+          
+}
+
+
+
