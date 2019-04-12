@@ -188,55 +188,75 @@ header nav {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  overflow: hidden;
-}
-header nav ul {
-  display: flex;
-  justify-content: space-between;
-  width: 60%;
-  font-size: 2.5rem;
 }
 @media (max-width: 550px) {
-  header nav ul {
+  header nav {
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    justify-content: center, center;
+    align-items: center;
+  }
+}
+header nav .navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+}
+@media (max-width: 550px) {
+  header nav .navbar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+header nav .navbar a {
+  color: black;
+  text-decoration: none;
+  font-size: 2.8rem;
+}
+header nav .navbar a:hover {
+  background-color: pink;
+}
+@media (max-width: 550px) {
+  header nav .navbar a {
+    padding: 2%;
+    font-size: 2rem;
+    border-top: 2px dashed #C0C0C0;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 640px) {
+  header nav .navbar a {
+    font-size: 2.5rem;
+  }
+}
+header span {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 4rem;
+  margin-top: 2%;
+}
+header span .logo {
+  padding-right: 5%;
+}
+@media (max-width: 550px) {
+  header span .logo {
+    display: none;
+  }
+}
+@media (max-width: 550px) {
+  header span {
     flex-direction: column;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-}
-@media (max-width: 550px) {
-  header nav ul li {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-header nav a {
-  text-decoration: none;
-  color: black;
-}
-header nav a:hover {
-  color: violet;
-}
-header nav span {
-  width: 10%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 4.5rem;
-}
-@media (max-width: 550px) {
-  header nav span {
-    flex-direction: column;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: space-between;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
 }
 .footer {
@@ -433,6 +453,15 @@ header nav span {
   width: 100%;
 }
 @media (max-width: 550px) {
+  .home .content-pick {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+@media (max-width: 640px) {
   .home .content-pick {
     display: flex;
     justify-content: center;
