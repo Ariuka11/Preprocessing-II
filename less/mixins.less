@@ -1,1 +1,29 @@
 // Mixins in here
+.custom-btn(@width:180px, @bgcolor:goldenrod, @fontcolor: black, @activecolor:linear-gradient(to right, #003973 0%, #E5E5BE 51%, #003973 100%)){
+    background: @bgcolor;
+      width: @width;
+      height: 45px;
+      border-radius: 15px;
+      cursor: pointer;
+      font-size: 1.8rem;
+      color: @fontcolor;
+      &:hover{
+        background: @fontcolor;
+        color: @bgcolor;
+      }
+      &:active {
+        background: @activecolor;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+}
+.custom-layout(@justify: space-between, @align: center){
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+// Escaping
+
+@mobile: ~"(max-width: 550px)";
+@tablet: ~"(max-width: 640px)";
